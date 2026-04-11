@@ -11,6 +11,7 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://netconnect-landing.vercel.app"),
   title: "Best Home Internet Providers Near You | NetConnect",
   description:
     "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees. Check availability by ZIP code.",
@@ -27,13 +28,26 @@ export const metadata: Metadata = {
     locale: "en_US",
     title: "Best Home Internet Providers Near You | NetConnect",
     description:
-      "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees."
+      "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees.",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "NetConnect - Best Home Internet Providers"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Best Home Internet Providers Near You | NetConnect",
     description:
-      "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees."
+      "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees.",
+    images: ["/og-image.png"]
+  },
+  icons: {
+    icon: "/favicon.png",
+    apple: "/apple-touch-icon.png"
   }
 };
 
