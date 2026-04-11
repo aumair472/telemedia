@@ -1,13 +1,14 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Headphones, Search, Shield, Zap } from "lucide-react";
+import { Headphones, Search, Shield, Zap, Phone } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { useForm } from "react-hook-form";
 
 import { HERO_STATS } from "@/lib/constants";
 import { zipCodeSchema, ZipCodeFormValues } from "@/lib/validations";
+import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -21,13 +22,14 @@ const trustItems = [
 ];
 
 export default function HeroSection() {
+  const { openModal } = useAvailabilityModal();
   const form = useForm<ZipCodeFormValues>({
     resolver: zodResolver(zipCodeSchema),
     defaultValues: { zip: "" }
   });
 
   const onSubmit = (values: ZipCodeFormValues) => {
-    window.location.hash = "lead-form";
+    openModal();
     form.reset(values);
   };
 
@@ -107,7 +109,7 @@ export default function HeroSection() {
                 whileTap={{ scale: 0.97 }}
                 type="submit"
                 aria-label="Check availability"
-                className="rounded-lg bg-[var(--accent)] px-6 py-2.5 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[var(--accent-glow)]"
+                className="rounded-lg bg-[var(--accent)] px-6 py-2.5 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[var(--accent-glow)] cursor-pointer"
               >
                 Check Availability &gt;
               </motion.button>
@@ -117,11 +119,12 @@ export default function HeroSection() {
             ) : null}
 
             <a
-              href="tel:18006383278"
-              className="mt-4 inline-flex rounded-lg border border-white/20 px-5 py-2.5 text-sm font-medium text-white transition hover:border-[var(--accent)]"
-              aria-label="Call now 1 800 NET FAST"
+              href="tel:18885240037"
+              className="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-[#00e676]/50 hover:text-[#00e676] transition-all"
+              aria-label="Call now 1-888-524-0037"
             >
-              Call Now: 1-800-NET-FAST
+              <Phone className="w-4 h-4" />
+              Call Now: 1-888-524-0037
             </a>
           </motion.form>
 

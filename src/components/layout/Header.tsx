@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, Wifi, X } from "lucide-react";
+import { Menu, Wifi, X, Phone } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
@@ -31,11 +31,12 @@ export default function Header() {
 
         <div className="hidden items-center md:flex">
           <a
-            href="tel:18006383278"
-            aria-label="Call now 1 800 NET FAST"
-            className="rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99]"
+            href="tel:18885240037"
+            aria-label="Call now 1-888-524-0037"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99]"
           >
-            Call Now: 1-800-NET-FAST
+            <Phone className="w-4 h-4" />
+            Call Now: 1-888-524-0037
           </a>
         </div>
 
@@ -51,7 +52,7 @@ export default function Header() {
 
       <div
         className={`overflow-hidden border-t border-[var(--border)] bg-[var(--bg-surface)] transition-all duration-300 md:hidden ${
-          open ? "max-h-64" : "max-h-0"
+          open ? "max-h-[300px]" : "max-h-0"
         }`}
       >
         <div className="space-y-2 px-4 py-4">
@@ -66,11 +67,12 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="tel:18006383278"
+            href="tel:18885240037"
             aria-label="Call now from mobile menu"
-            className="mt-2 block rounded-lg bg-[var(--accent)] px-3 py-2 text-center text-sm font-bold text-[var(--bg-base)]"
+            className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-3 py-3 text-center text-sm font-bold text-[var(--bg-base)]"
           >
-            Call Now: 1-800-NET-FAST
+            <Phone className="w-4 h-4" />
+            Call Now: 1-888-524-0037
           </a>
         </div>
       </div>

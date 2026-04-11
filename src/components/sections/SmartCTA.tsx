@@ -2,19 +2,21 @@
 
 import { zodResolver } from "@hookform/resolvers/zod";
 import { motion } from "framer-motion";
-import { Search } from "lucide-react";
+import { Search, Phone } from "lucide-react";
 import { useForm } from "react-hook-form";
 
 import { zipCodeSchema, ZipCodeFormValues } from "@/lib/validations";
+import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
 
 export default function SmartCTA() {
+  const { openModal } = useAvailabilityModal();
   const form = useForm<ZipCodeFormValues>({
     resolver: zodResolver(zipCodeSchema),
     defaultValues: { zip: "" }
   });
 
   const onSubmit = () => {
-    window.location.hash = "lead-form";
+    openModal();
   };
 
   return (
@@ -39,11 +41,12 @@ export default function SmartCTA() {
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="tel:18006383278"
+            href="tel:18885240037"
             aria-label="Talk to an internet expert"
-            className="mt-8 inline-block rounded-xl bg-[var(--accent)] px-10 py-4 text-lg font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[0_0_32px_rgba(0,230,118,0.3)]"
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-10 py-4 text-lg font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[0_0_32px_rgba(0,230,118,0.3)]"
           >
-            Talk to an Internet Expert -&gt;
+            <Phone className="w-5 h-5" />
+            Call Now: 1-888-524-0037
           </motion.a>
 
           <form
@@ -65,7 +68,7 @@ export default function SmartCTA() {
             </div>
             <button
               type="submit"
-              className="rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-bold text-[var(--bg-base)]"
+              className="rounded-lg bg-[var(--accent)] px-5 py-2.5 text-sm font-bold text-[var(--bg-base)] cursor-pointer"
             >
               Check Availability
             </button>

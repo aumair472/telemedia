@@ -3,6 +3,8 @@ import { Geist } from "next/font/google";
 import { Toaster } from "sonner";
 
 import "./globals.css";
+import { AvailabilityModalProvider } from "@/context/AvailabilityModalContext";
+import AvailabilityModal from "@/components/modals/AvailabilityModal";
 
 const geist = Geist({
   subsets: ["latin"],
@@ -63,7 +65,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${geist.className} antialiased`}>
-        {children}
+        <AvailabilityModalProvider>
+          {children}
+          <AvailabilityModal />
+        </AvailabilityModalProvider>
         <Toaster richColors closeButton position="top-right" />
       </body>
     </html>

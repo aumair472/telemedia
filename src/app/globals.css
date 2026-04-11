@@ -92,6 +92,18 @@ a {
   }
 }
 
+@keyframes ctaGlow {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(0, 230, 118, 0.2);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(0, 230, 118, 0);
+  }
+}
+
 .animate-accordion-down {
   animation: accordion-down 0.2s ease-out;
 }
