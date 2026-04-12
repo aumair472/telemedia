@@ -13,8 +13,8 @@ const geist = Geist({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://netconnect-landing.vercel.app"),
-  title: "Best Home Internet Providers Near You | NetConnect",
+  metadataBase: new URL("https://internetconsultation.us"),
+  title: "Best Home Internet Providers Near You | InternetConsultation",
   description:
     "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees. Check availability by ZIP code.",
   keywords: [
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Best Home Internet Providers Near You | NetConnect",
+    title: "Best Home Internet Providers Near You | InternetConsultation",
     description:
       "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees.",
     images: [
@@ -36,13 +36,13 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "NetConnect - Best Home Internet Providers"
+        alt: "InternetConsultation - Best Home Internet Providers"
       }
     ]
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best Home Internet Providers Near You | NetConnect",
+    title: "Best Home Internet Providers Near You | InternetConsultation",
     description:
       "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees.",
     images: ["/og-image.png"]
@@ -63,8 +63,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${geist.className} antialiased`}>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${geist.className} antialiased`} suppressHydrationWarning>
         <AvailabilityModalProvider>
           {children}
           <AvailabilityModal />

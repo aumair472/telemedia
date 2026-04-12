@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Footer() {
@@ -6,7 +7,16 @@ export default function Footer() {
       <div className="mx-auto flex w-full max-w-7xl flex-col gap-8 px-4 py-10 sm:px-6 lg:px-8">
         <div className="flex flex-col justify-between gap-6 md:flex-row md:items-center">
           <div>
-            <p className="text-xl font-black text-white">NetConnect</p>
+            <div className="flex items-center gap-2">
+              <Image
+                src="/logo.png"
+                alt="InternetConsultation"
+                width={150}
+                height={32}
+                className="h-8 w-auto"
+              />
+              <span className="text-xl font-bold text-white">InternetConsultation</span>
+            </div>
             <p className="mt-2 text-sm text-[var(--text-muted)]">
               Connecting America, one home at a time.
             </p>
@@ -32,7 +42,7 @@ export default function Footer() {
 
           <a
             href="tel:18006383278"
-            aria-label="Call NetConnect"
+            aria-label="Call InternetConsultation"
             className="text-lg font-bold text-[var(--accent)]"
           >
             1-800-NET-FAST
@@ -40,7 +50,7 @@ export default function Footer() {
         </div>
 
         <p className="text-xs text-[var(--text-hint)]">
-          Copyright 2025 NetConnect. All rights reserved. Not affiliated with any provider.
+          Copyright 2025 InternetConsultation. All rights reserved. Not affiliated with any provider.
         </p>
       </div>
     </footer>

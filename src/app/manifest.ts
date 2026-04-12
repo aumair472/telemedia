@@ -2,8 +2,8 @@ import { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'NetConnect - Best Home Internet Providers',
-    short_name: 'NetConnect',
+    name: 'InternetConsultation - Best Home Internet Providers',
+    short_name: 'InternetConsultation',
     description: 'Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees.',
     start_url: '/',
     display: 'standalone',

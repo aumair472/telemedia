@@ -122,7 +122,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Is your service really free?",
     answer:
-      "Yes. NetConnect is 100% free to use. We compare plans, explain your options, and connect you without adding service fees."
+      "Yes. InternetConsultation is 100% free to use. We compare plans, explain your options, and connect you without adding service fees."
   },
   {
     question: "How do I know which provider is best for me?",
