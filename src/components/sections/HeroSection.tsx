@@ -92,7 +92,7 @@ export default function HeroSection() {
                   maxLength={5}
                   placeholder="Enter your zip code"
                   aria-label="Enter ZIP code"
-                  className="w-full bg-transparent text-base text-white outline-none placeholder:text-[var(--text-muted)]"
+                  className="w-full bg-transparent text-base text-black outline-none placeholder:text-[var(--text-muted)]"
                 />
               </div>
               <motion.button
