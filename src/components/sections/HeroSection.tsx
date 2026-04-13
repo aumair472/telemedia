@@ -82,7 +82,7 @@ export default function HeroSection() {
             className="mt-8"
             aria-label="Check internet availability by ZIP code"
           >
-            <div className="flex flex-col gap-3 rounded-xl border border-white/10 bg-white/25 p-2 sm:flex-row sm:items-center">
+            <div className="flex flex-col gap-3 rounded-xl border border-white/10 bg-white/95 p-2 sm:flex-row sm:items-center">
               <div className="flex flex-1 items-center gap-2 rounded-lg px-3 py-2">
                 <Search className="size-5 text-[var(--text-muted)]" />
                 <input
