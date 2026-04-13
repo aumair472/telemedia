@@ -38,15 +38,6 @@ export default function HeroSection() {
       className="relative flex min-h-screen items-center overflow-hidden bg-[var(--bg-base)] pt-24"
       id="top"
     >
-      <Image
-        src="/hero-bg.png"
-        alt="Modern living room interior with comfortable seating and ambient lighting"
-        fill
-        priority
-        className="object-cover"
-      />
-      <div className="absolute inset-0 bg-black/85" aria-hidden="true" />
-
       <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl">
           <motion.div
@@ -76,7 +67,7 @@ export default function HeroSection() {
             initial="hidden"
             animate="show"
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 max-w-xl text-lg text-[var(--text-muted)]"
+            className="mt-6 max-w-xl text-lg text-[var(--text-muted)] text-white"
           >
             Compare top providers like AT&T, Spectrum, Optimum & more - and get connected today.
           </motion.p>
@@ -91,7 +82,7 @@ export default function HeroSection() {
             className="mt-8"
             aria-label="Check internet availability by ZIP code"
           >
-            <div className="flex flex-col gap-3 rounded-xl border border-white/12 bg-white/7 p-2 sm:flex-row sm:items-center">
+            <div className="flex flex-col gap-3 rounded-xl border border-white/10 bg-white/25 p-2 sm:flex-row sm:items-center">
               <div className="flex flex-1 items-center gap-2 rounded-lg px-3 py-2">
                 <Search className="size-5 text-[var(--text-muted)]" />
                 <input
