@@ -46,7 +46,7 @@ export default function CallCTASection() {
               1-888-359-5742
             </a>
             <p className="mt-2 text-sm text-[#4a6080]">
-              Mon–Fri 8AM–10PM EST · Free Service
+              Mon–Sat 8AM–10PM EST · Free Service
             </p>
           </div>
 
