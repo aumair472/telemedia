@@ -26,7 +26,10 @@ export interface Stat {
   label: string;
 }
 
-export interface Feature {
-  icon: string;
+
+export interface MarketProvider {
+  name: string;
+  logo: string;
   label: string;
 }
+

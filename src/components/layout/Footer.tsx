@@ -41,11 +41,11 @@ export default function Footer() {
           </nav>
 
           <a
-            href="tel:18006383278"
-            aria-label="Call InternetConsultation"
+            href="tel:18883595742"
+            aria-label="Call InternetConsultation: 1-888-359-5742"
             className="text-lg font-bold text-[var(--accent)]"
           >
-            1-800-NET-FAST
+            1-888-359-5742
           </a>
         </div>
 

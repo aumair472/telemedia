@@ -15,6 +15,7 @@ const geist = Geist({
 export const metadata: Metadata = {
   metadataBase: new URL("https://internetconsultation.us"),
   title: "Best Home Internet Providers Near You | InternetConsultation",
+  manifest: "/manifest.json",
   description:
     "Compare top internet providers in your area. Expert help choosing the best plan - fast, free, no hidden fees. Check availability by ZIP code.",
   keywords: [

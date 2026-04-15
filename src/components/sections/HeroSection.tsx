@@ -3,7 +3,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Headphones, Search, Shield, Zap, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import Image from "next/image";
+
 import { useForm } from "react-hook-form";
 
 import { HERO_STATS } from "@/lib/constants";
@@ -110,12 +110,12 @@ export default function HeroSection() {
             ) : null}
 
             <a
-              href="tel:18885240037"
+              href="tel:18883595742"
               className="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-[#00e676]/50 hover:text-[#00e676] transition-all"
-              aria-label="Call now 1-888-524-0037"
+              aria-label="Call now 1-888-359-5742"
             >
               <Phone className="w-4 h-4" />
-              Call Now: 1-888-524-0037
+              Call Now: 1-888-359-5742
             </a>
           </motion.form>
 

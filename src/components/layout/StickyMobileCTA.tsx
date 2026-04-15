@@ -16,8 +16,8 @@ export default function StickyMobileCTA() {
         Check Availability
       </button>
       <a
-        href="tel:18885240037"
-        aria-label="Call now"
+        href="tel:18883595742"
+        aria-label="Call now: 1-888-359-5742"
         className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3 text-center text-sm font-semibold text-white"
       >
         <Phone className="w-4 h-4" />

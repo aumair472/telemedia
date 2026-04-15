@@ -28,22 +28,22 @@ export default function CallCTASection() {
 
           {/* Heading */}
           <h2 className="mt-4 text-3xl font-bold text-white sm:text-4xl" style={{ textWrap: 'balance' }}>
-            Ready to Get Connected?
+           Ready to get connected?
           </h2>
 
           {/* Subtext */}
           <p className="mx-auto mt-3 max-w-lg text-base leading-relaxed text-[#8b9ab0]">
-            Our certified internet specialists are standing by. Compare plans, get instant pricing, and book your installation — all in one free call.
+            Our certified specialists work with leading providers to help you compare plans, check real-time availability, and secure the best offer for your address — all in one quick, free call.
           </p>
 
           {/* Big Phone Number Display */}
           <div className="mt-8">
             <a
-              href="tel:18885240037"
+              href="tel:18883595742"
               className="inline-flex items-center gap-3 text-4xl font-black text-[#00e676] transition-colors hover:text-[#00ff99] sm:text-5xl"
             >
               <Phone className="h-10 w-10 shrink-0" fill="currentColor" />
-              1-888-524-0037
+              1-888-359-5742
             </a>
             <p className="mt-2 text-sm text-[#4a6080]">
               Mon–Fri 8AM–10PM EST · Free Service
@@ -52,7 +52,7 @@ export default function CallCTASection() {
 
           {/* Primary CTA Button */}
           <a
-            href="tel:18885240037"
+            href="tel:18883595742"
             className="mx-auto mt-8 flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#00e676] py-4 text-lg font-bold text-black shadow-[0_0_30px_rgba(0,230,118,0.15)] transition-all duration-200 hover:bg-[#00ff99] hover:shadow-[0_0_40px_rgba(0,230,118,0.3)]"
           >
             <Phone size={20} fill="currentColor" />

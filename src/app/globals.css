@@ -65,14 +65,24 @@ a {
 }
 
 .marquee-track {
-  animation: marquee 18s linear infinite;
+  display: flex;
+  gap: 1.5rem; /* gap-6 */
+  width: max-content;
+  animation: marquee 120s linear infinite;
+  will-change: transform;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .marquee-track {
-    animation: none;
+    gap: 3rem; /* gap-12 */
+    animation-duration: 200s;
+  }
+  
+  .marquee-track:hover {
+    animation-play-state: paused;
   }
 }
+
 
 @keyframes accordion-down {
   from {

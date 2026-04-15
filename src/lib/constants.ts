@@ -1,4 +1,4 @@
-import { FAQItem, Provider, Stat } from "@/types";
+import { FAQItem, MarketProvider, Provider, Stat } from "@/types";
 
 export const NAV_LINKS = [
   { label: "How It Works", href: "#how-it-works" },
@@ -19,7 +19,83 @@ export const HERO_STATS: Stat[] = [
   { value: "Free", label: "Service" }
 ];
 
-export const PROVIDER_LOGOS = ["AT&T", "Spectrum", "Optimum", "Kinetic", "Cox", "Xfinity"];
+export const AUTHORIZED_PROVIDERS: MarketProvider[] = [
+  {
+    name: "Spectrum",
+    logo: "/providers/spectrumlogo.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "AT&T",
+    logo: "/providers/att2_logo_website-4-1.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "Xfinity",
+    logo: "/providers/xfinity-logo-authorized-retailer-row.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "Cox",
+    logo: "/providers/cox-logo-authorized-retailer-1.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "DIRECTV",
+    logo: "/providers/directv_logo25.webp",
+    label: "Authorized Dealer"
+  },
+  {
+    name: "Optimum",
+    logo: "/providers/optimum_logo_website-1.webp",
+    label: "Authorized Reseller"
+  },
+  {
+    name: "EarthLink",
+    logo: "/providers/Earthlink-authorized-retailer-logo-row.webp",
+    label: "Authorized Reseller"
+  },
+  {
+    name: "Frontier",
+    logo: "/providers/frontier_verizon-2048x765-1.webp",
+    label: "Authorized Sales Agent"
+  },
+  {
+    name: "Kinetic",
+    logo: "/providers/kinetic-logo-1.webp",
+    label: "Authorized Agent"
+  },
+  {
+    name: "Brightspeed",
+    logo: "/providers/brightspeed-scaled.webp",
+    label: "Authorized Agent"
+  },
+  {
+    name: "WOW!",
+    logo: "/providers/wow_authorized_reseller_logo_website-1.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "Vivint",
+    logo: "/providers/vivint_logo.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "ADT",
+    logo: "/providers/ADT_logo.webp",
+    label: "Authorized Dealer"
+  },
+  {
+    name: "Viasat",
+    logo: "/providers/Viasat-logo-authorized-retailer-row.webp",
+    label: "Authorized Retailer"
+  },
+  {
+    name: "Cinch",
+    logo: "/providers/cinch_logo-provider-row.webp",
+    label: "Authorized Partner"
+  }
+];
 
 export const HOW_IT_WORKS_STEPS = [
   {

@@ -39,12 +39,12 @@ export default function Header() {
 
         <div className="hidden items-center md:flex">
           <a
-            href="tel:18885240037"
-            aria-label="Call now 1-888-524-0037"
+            href="tel:18883595742"
+            aria-label="Call now 1-888-359-5742"
             className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99]"
           >
             <Phone className="w-4 h-4" />
-            Call Now: 1-888-524-0037
+            Call Now: 1-888-359-5742
           </a>
         </div>
 
@@ -74,12 +74,12 @@ export default function Header() {
             </Link>
           ))}
           <a
-            href="tel:18885240037"
+            href="tel:18883595742"
             aria-label="Call now from mobile menu"
             className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-3 py-3 text-center text-sm font-bold text-[var(--bg-base)]"
           >
             <Phone className="w-4 h-4" />
-            Call Now: 1-888-524-0037
+            Call Now: 1-888-359-5742
           </a>
         </div>
       </div>

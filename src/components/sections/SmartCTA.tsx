@@ -41,12 +41,12 @@ export default function SmartCTA() {
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="tel:18885240037"
+            href="tel:18883595742"
             aria-label="Talk to an internet expert"
             className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-10 py-4 text-lg font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[0_0_32px_rgba(0,230,118,0.3)]"
           >
             <Phone className="w-5 h-5" />
-            Call Now: 1-888-524-0037
+            Call Now: 1-888-359-5742
           </motion.a>
 
           <form
