@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://internetconsultation.us/sitemap.xml
+Sitemap: https://www.internetconsultation.us/sitemap.xml

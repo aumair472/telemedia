@@ -23,7 +23,7 @@ export default function TermsConditions() {
 
             <h2 className="text-2xl font-bold text-white mt-10">2. Accuracy of Information</h2>
             <p>
-              While we strive to provide accurate and up-to-date information regarding provider plans, speeds, and pricing, all information is subject to change without notice. Availability and actual speeds depend on your specific address and the provider's infrastructure.
+              While we strive to provide accurate and up-to-date information regarding provider plans, speeds, and pricing, all information is subject to change without notice. Availability and actual speeds depend on your specific address and the provider&apos;s infrastructure.
             </p>
 
             <h2 className="text-2xl font-bold text-white mt-10">3. Use of the Site</h2>
