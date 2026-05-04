@@ -44,10 +44,12 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0 }}
-            className="inline-flex items-center gap-2 rounded-full border border-[var(--accent-border)] bg-[var(--accent-dim)] px-4 py-2 text-sm text-[var(--accent)]"
+            className="flex flex-wrap items-center gap-3 mb-8"
           >
-            <span className="dot-pulse h-2.5 w-2.5 rounded-full bg-[var(--accent)]" />
-            Last connection secured 4 minutes ago
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-[var(--bg-surface)] px-4 py-1.5 text-xs sm:text-sm text-[var(--accent)] font-medium">
+              <span className="h-2 w-2 rounded-full bg-[var(--accent)] animate-pulse" />
+              Last connection secured 4 minutes ago
+            </div>
           </motion.div>
 
           <motion.h1
@@ -55,7 +57,7 @@ export default function HeroSection() {
             initial="hidden"
             animate="show"
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="mt-6 text-[clamp(40px,7vw,80px)] font-black leading-[0.95] tracking-tight text-white"
+            className="mt-2 text-[clamp(40px,7vw,80px)] font-black leading-[0.95] tracking-tight text-white"
           >
             FIND THE BEST
             <br />
@@ -67,9 +69,9 @@ export default function HeroSection() {
             initial="hidden"
             animate="show"
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="mt-6 max-w-xl text-lg text-[var(--text-muted)] text-white"
+            className="mt-6 max-w-xl text-lg text-white/80 leading-relaxed"
           >
-            Compare top providers like AT&T, Spectrum, Optimum & more - and get connected today.
+            We help you compare side-by-side plans from leading providers like AT&T, Spectrum, and Optimum. Get transparent pricing and availability — all in one place.
           </motion.p>
 
           <motion.form

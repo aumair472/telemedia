@@ -6,8 +6,9 @@ import Script from "next/script";
 import "./globals.css";
 import { AvailabilityModalProvider } from "@/context/AvailabilityModalContext";
 import AvailabilityModal from "@/components/modals/AvailabilityModal";
+import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 
-const geist = Geist({
+export const geist = Geist({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800", "900"],
   display: "swap"
@@ -78,6 +79,64 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KTPNML8H');`,
           }}
         />
+        <Script
+          id="schema-org"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Symzi Tech Solutions",
+              "alternateName": "InternetConsultation",
+              "url": "https://www.internetconsultation.us",
+              "logo": "https://www.internetconsultation.us/logo.png",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "1-888-359-5742",
+                "contactType": "customer service",
+                "areaServed": "US",
+                "availableLanguage": "en"
+              }
+            })
+          }}
+        />
+        <Script
+          id="local-business-schema"
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "LocalBusiness",
+              "name": "InternetConsultation",
+              "image": "https://www.internetconsultation.us/og-image.png",
+              "@id": "https://www.internetconsultation.us",
+              "url": "https://www.internetconsultation.us",
+              "telephone": "1-888-359-5742",
+              "priceRange": "$",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "Nationwide Service",
+                "addressLocality": "USA",
+                "addressRegion": "Nationwide",
+                "postalCode": "00000",
+                "addressCountry": "US"
+              },
+              "openingHoursSpecification": {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": [
+                  "Monday",
+                  "Tuesday",
+                  "Wednesday",
+                  "Thursday",
+                  "Friday",
+                  "Saturday"
+                ],
+                "opens": "08:00",
+                "closes": "22:00"
+              }
+            })
+          }}
+        />
       </head>
       <body className={`${geist.className} antialiased`} suppressHydrationWarning>
         <noscript>
@@ -91,6 +150,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <AvailabilityModalProvider>
           {children}
           <AvailabilityModal />
+          <StickyMobileCTA />
         </AvailabilityModalProvider>
         <Toaster richColors closeButton position="top-right" />
       </body>

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { AUTHORIZED_PROVIDERS } from "@/lib/constants";
+import { AUTHORIZED_PROVIDERS, SITE_CONFIG } from "@/lib/constants";
 
 export default function ProviderLogos() {
   return (
@@ -55,9 +55,12 @@ export default function ProviderLogos() {
         <div className="pointer-events-none absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-[#0d1117] to-transparent z-10" />
       </div>
       
-      <div className="mx-auto mt-16 flex w-full max-w-7xl justify-center px-4">
+      <div className="mx-auto mt-16 flex flex-col items-center gap-4 px-4 text-center">
         <p className="text-sm font-medium text-[#4a5568]">
           Availability and speeds vary by address. Call for a real-time area scan.
+        </p>
+        <p className="text-[10px] text-[#4a5568]/60 uppercase tracking-widest">
+          {SITE_CONFIG.disclaimers.trademarks}
         </p>
       </div>
     </section>

@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 
-import { PROVIDERS } from "@/lib/constants";
+import { PROVIDERS, SITE_CONFIG } from "@/lib/constants";
 
 export default function ComparisonTable() {
   return (
@@ -105,6 +105,9 @@ export default function ComparisonTable() {
             </article>
           ))}
         </div>
+        <p className="mt-8 text-center text-xs leading-relaxed text-[var(--text-muted)] opacity-80 max-w-3xl mx-auto">
+          {SITE_CONFIG.disclaimers.independentRetailer}
+        </p>
       </div>
     </section>
   );

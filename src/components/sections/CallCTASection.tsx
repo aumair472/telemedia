@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Phone, Shield, Star, CheckCircle, Zap } from "lucide-react";
+import { SITE_CONFIG } from "@/lib/constants";
 
 const TRUST_BAR = [
   { icon: Shield, label: "No Hidden Fees" },
@@ -39,20 +40,20 @@ export default function CallCTASection() {
           {/* Big Phone Number Display */}
           <div className="mt-8">
             <a
-              href="tel:18883595742"
+              href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
               className="inline-flex items-center gap-3 text-4xl font-black text-[#00e676] transition-colors hover:text-[#00ff99] sm:text-5xl"
             >
               <Phone className="h-10 w-10 shrink-0" fill="currentColor" />
-              1-888-359-5742
+              {SITE_CONFIG.contact.phone}
             </a>
             <p className="mt-2 text-sm text-[#4a6080]">
-              Mon–Sat 8AM–10PM EST · Free Service
+              {SITE_CONFIG.contact.availability} · Free Service
             </p>
           </div>
 
           {/* Primary CTA Button */}
           <a
-            href="tel:18883595742"
+            href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
             className="mx-auto mt-8 flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#00e676] py-4 text-lg font-bold text-black shadow-[0_0_30px_rgba(0,230,118,0.15)] transition-all duration-200 hover:bg-[#00ff99] hover:shadow-[0_0_40px_rgba(0,230,118,0.3)]"
           >
             <Phone size={20} fill="currentColor" />

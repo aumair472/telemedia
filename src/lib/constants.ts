@@ -97,20 +97,34 @@ export const AUTHORIZED_PROVIDERS: MarketProvider[] = [
   }
 ];
 
+export const SITE_CONFIG = {
+  businessName: "Symzi Tech Solutions",
+  description: "We help customers find and compare internet services from top US providers.",
+  contact: {
+    phone: "1-888-359-5742",
+    email: "support@symzitech.com",
+    availability: "Mon–Sat 8AM–10PM EST"
+  },
+  disclaimers: {
+    independentRetailer: "We are an authorized retailer and independent partner of major US internet providers. We do not claim ownership of any provider brands.",
+    trademarks: "All trademarks belong to their respective owners."
+  }
+};
+
 export const HOW_IT_WORKS_STEPS = [
   {
-    title: "Enter Your ZIP Code",
-    description: "We scan every provider at your exact address instantly.",
+    title: "Enter Your Address",
+    description: "Provide your location to see exactly which providers serve your specific area.",
     icon: "map-pin"
   },
   {
-    title: "Compare Available Plans",
-    description: "Side-by-side speed, price, and contract comparisons.",
+    title: "Compare Available Providers",
+    description: "View side-by-side speed, price, and feature comparisons from top US ISPs.",
     icon: "bar-chart"
   },
   {
-    title: "Get Connected Instantly",
-    description: "Pick your plan. Our specialist handles everything.",
+    title: "Get Connected",
+    description: "Choose your ideal plan and get set up through our secure partner network.",
     icon: "zap"
   }
 ] as const;
@@ -198,7 +212,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     question: "Is your service really free?",
     answer:
-      "Yes. InternetConsultation is 100% free to use. We compare plans, explain your options, and connect you without adding service fees."
+      "Yes. Our platform is 100% free to use. We compare plans, explain your options, and connect you without adding any service fees."
   },
   {
     question: "How do I know which provider is best for me?",
