@@ -64,8 +64,12 @@ export default function ContactUs() {
                      <div className="flex items-start gap-4">
                         <MapPin className="w-6 h-6 text-[var(--accent)] shrink-0" />
                         <div>
-                           <p className="font-bold text-white">Office Location</p>
-                           <p className="text-[var(--text-muted)]">Nationwide Service Center</p>
+                            <p className="font-bold text-white">Registered Address</p>
+                            <p className="text-[var(--text-muted)] text-sm">
+                               {SITE_CONFIG.address.street}<br />
+                               {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
+                            </p>
+
                         </div>
                      </div>
                      <div className="flex items-start gap-4">

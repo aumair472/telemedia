@@ -86,7 +86,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Symzi Tech Solutions",
+              "name": "SYMZI TECH-SOLUTIONS LLC",
               "alternateName": "InternetConsultation",
               "url": "https://www.internetconsultation.us",
               "logo": "https://www.internetconsultation.us/logo.png",
@@ -107,7 +107,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "InternetConsultation",
+              "name": "SYMZI TECH-SOLUTIONS LLC",
               "image": "https://www.internetconsultation.us/og-image.png",
               "@id": "https://www.internetconsultation.us",
               "url": "https://www.internetconsultation.us",
@@ -115,10 +115,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "priceRange": "$",
               "address": {
                 "@type": "PostalAddress",
-                "streetAddress": "Nationwide Service",
-                "addressLocality": "USA",
-                "addressRegion": "Nationwide",
-                "postalCode": "00000",
+                "streetAddress": "2600 E Renner Rd, Apt 276",
+                "addressLocality": "Richardson",
+                "addressRegion": "Texas",
+                "postalCode": "75082",
                 "addressCountry": "US"
               },
               "openingHoursSpecification": {

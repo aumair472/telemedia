@@ -13,7 +13,7 @@ export const TRUST_ITEMS = [
 ] as const;
 
 export const HERO_STATS: Stat[] = [
-  { value: "500+", label: "Providers" },
+  { value: "30+", label: "Providers" },
   { value: "50K+", label: "Customers" },
   { value: "4.9", label: "Rating" },
   { value: "Free", label: "Service" }
@@ -98,8 +98,15 @@ export const AUTHORIZED_PROVIDERS: MarketProvider[] = [
 ];
 
 export const SITE_CONFIG = {
-  businessName: "Symzi Tech Solutions",
+  businessName: "SYMZI TECH-SOLUTIONS LLC",
   description: "We help customers find and compare internet services from top US providers.",
+  address: {
+    street: "2600 E Renner Rd, Apt 276",
+    city: "Richardson",
+    state: "Texas",
+    zip: "75082",
+    country: "USA"
+  },
   contact: {
     phone: "1-888-359-5742",
     email: "support@symzitech.com",
@@ -110,6 +117,7 @@ export const SITE_CONFIG = {
     trademarks: "All trademarks belong to their respective owners."
   }
 };
+
 
 export const HOW_IT_WORKS_STEPS = [
   {

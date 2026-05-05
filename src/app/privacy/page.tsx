@@ -61,6 +61,10 @@ export default function PrivacyPolicy() {
             </p>
             <div className="bg-[var(--bg-surface)] p-6 rounded-xl border border-[var(--border)] mt-4">
               <p className="font-bold text-white">{SITE_CONFIG.businessName}</p>
+              <p className="text-sm">
+                {SITE_CONFIG.address.street}<br />
+                {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
+              </p>
               <p>Email: {SITE_CONFIG.contact.email}</p>
               <p>Phone: {SITE_CONFIG.contact.phone}</p>
             </div>
