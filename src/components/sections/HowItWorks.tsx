@@ -2,6 +2,7 @@
 
 import { BarChart3, MapPin, Zap } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 import { HOW_IT_WORKS_STEPS } from "@/lib/constants";
 
@@ -10,6 +11,12 @@ const iconMap = {
   "bar-chart": BarChart3,
   zap: Zap
 };
+
+const illustrationMap = [
+  "/illustrations/step1_realistic.png",
+  "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
+  "https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+];
 
 export default function HowItWorks() {
   return (
@@ -38,19 +45,30 @@ export default function HowItWorks() {
           className="relative mt-12 grid grid-cols-1 gap-6 md:grid-cols-3"
         >
           <div className="pointer-events-none absolute left-[17%] right-[17%] top-20 hidden border-t border-dashed border-[var(--border)] md:block" />
-          {HOW_IT_WORKS_STEPS.map((step) => {
+          {HOW_IT_WORKS_STEPS.map((step, index) => {
             const Icon = iconMap[step.icon as keyof typeof iconMap];
             return (
               <motion.article
                 key={step.title}
                 variants={{ hidden: { opacity: 0, y: 20 }, show: { opacity: 1, y: 0 } }}
-                className="relative rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] p-6 transition duration-200 hover:border-[var(--accent)]"
+                className="relative group rounded-2xl border border-[var(--border)] bg-[var(--bg-surface)] p-6 transition duration-300 hover:border-[var(--accent)] hover:shadow-2xl overflow-hidden"
               >
-                <div className="inline-flex rounded-xl bg-[var(--accent-dim)] p-3">
+                <div className="relative w-full h-40 mb-6 rounded-xl overflow-hidden bg-[var(--bg-card)]">
+                  <Image
+                    src={illustrationMap[index]}
+                    alt={step.title}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[var(--bg-surface)] via-transparent to-transparent opacity-60" />
+                </div>
+
+                <div className="inline-flex rounded-xl bg-[var(--accent-dim)] p-3 mb-4">
                   <Icon className="size-6 text-[var(--accent)]" />
                 </div>
-                <h3 className="mt-5 text-xl font-bold text-white">{step.title}</h3>
-                <p className="mt-2 text-[var(--text-muted)]">{step.description}</p>
+                <h3 className="text-xl font-bold text-white">{step.title}</h3>
+                <p className="mt-2 text-[var(--text-muted)] leading-relaxed">{step.description}</p>
               </motion.article>
             );
           })}

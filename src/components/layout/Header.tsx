@@ -5,7 +5,7 @@ import { Menu, X, Phone } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 
-import { NAV_LINKS, SITE_CONFIG } from "@/lib/constants";
+import { SITE_CONFIG } from "@/lib/constants";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -25,11 +25,12 @@ export default function Header() {
           <span className="text-xl font-bold text-white tracking-tight">Internet Consultation</span>
         </Link>
 
-        <div className="hidden items-center md:flex">
+
+        <div className="hidden items-center gap-4 md:flex">
           <a
             href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
             aria-label={`Call now ${SITE_CONFIG.contact.phone}`}
-            className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99]"
+            className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[var(--accent-glow)]"
           >
             <Phone className="w-4 h-4" />
             {SITE_CONFIG.contact.phone}
@@ -48,18 +49,20 @@ export default function Header() {
 
       <div
         className={`overflow-hidden border-t border-[var(--border)] bg-[var(--bg-surface)] transition-all duration-300 md:hidden ${
-          open ? "max-h-[300px]" : "max-h-0"
+          open ? "max-h-[500px]" : "max-h-0"
         }`}
       >
-        <div className="space-y-2 px-4 py-4">
-          <a
-            href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
-            aria-label="Call now from mobile menu"
-            className="mt-2 flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-3 py-3 text-center text-sm font-bold text-[var(--bg-base)]"
-          >
-            <Phone className="w-4 h-4" />
-            Call Now: {SITE_CONFIG.contact.phone}
-          </a>
+        <div className="flex flex-col gap-4 px-4 py-6">
+          <div className="pt-4 border-t border-[var(--border)]">
+            <a
+              href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
+              aria-label="Call now from mobile menu"
+              className="flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-3 py-3 text-center text-sm font-bold text-[var(--bg-base)]"
+            >
+              <Phone className="w-4 h-4" />
+              Call Now: {SITE_CONFIG.contact.phone}
+            </a>
+          </div>
         </div>
       </div>
     </header>

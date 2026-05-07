@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Phone, Shield, Star, CheckCircle, Zap } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
+import Image from "next/image";
 
 const TRUST_BAR = [
   { icon: Shield, label: "No Hidden Fees" },
@@ -13,8 +14,12 @@ const TRUST_BAR = [
 
 export default function CallCTASection() {
   return (
-    <section className="bg-[#070b12] py-20 text-center relative overflow-hidden">
-      <div className="mx-auto max-w-2xl px-4 relative z-10">
+    <section className="bg-[#070b12] py-24 text-center relative overflow-hidden border-y border-[var(--border)]">
+
+      {/* Glow Effects */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-[var(--accent)] opacity-[0.05] blur-[120px] rounded-full pointer-events-none" />
+      
+      <div className="mx-auto max-w-4xl px-4 relative z-10">
         <motion.div
            initial={{ opacity: 0, y: 20 }}
            whileInView={{ opacity: 1, y: 0 }}

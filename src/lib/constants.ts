@@ -1,10 +1,5 @@
 import { FAQItem, MarketProvider, Provider, Stat } from "@/types";
 
-export const NAV_LINKS = [
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Providers", href: "#providers" },
-  { label: "FAQ", href: "#faq" }
-] as const;
 
 export const TRUST_ITEMS = [
   { icon: "shield", label: "No Hidden Fees" },
@@ -16,7 +11,7 @@ export const HERO_STATS: Stat[] = [
   { value: "30+", label: "Providers" },
   { value: "50K+", label: "Customers" },
   { value: "4.9", label: "Rating" },
-  { value: "Free", label: "Service" }
+  { value: "Free", label: "Consultation" }
 ];
 
 export const AUTHORIZED_PROVIDERS: MarketProvider[] = [
@@ -263,4 +258,49 @@ export const LEAD_TRUST_CARDS = [
   { title: "4.9/5 Average Rating", detail: "Verified customer satisfaction" },
   { title: "50,000+ Customers Connected", detail: "Trusted nationwide service" },
   { title: "< 15 min Response Time", detail: "Specialists ready to assist" }
+];
+
+export const TESTIMONIALS = [
+  {
+    name: "Sarah Johnson",
+    role: "Remote Marketing Manager",
+    content: "Switching to fiber through Internet Consultation was the best decision for my home office. The comparison tool made it so easy to see which provider actually had the best speeds in my specific zip code.",
+    rating: 5,
+    avatar: "/avatars/sarah.png",
+  },
+  {
+    name: "Michael Chen",
+    role: "Freelance Developer",
+    content: "I was tired of hidden fees from my old provider. These guys helped me find a transparent plan with AT&T that saved me $30 a month while increasing my upload speeds. Highly recommended!",
+    rating: 5,
+    avatar: "/avatars/michael.png",
+  },
+  {
+    name: "Emily Rodriguez",
+    role: "Small Business Owner",
+    content: "The support team was incredibly helpful. They walked me through the different business plans and helped me secure a connection that handles our entire team's needs without breaking the bank.",
+    rating: 5,
+    avatar: "/avatars/emily.png",
+  },
+  {
+    name: "David Wilson",
+    role: "Tech Enthusiast",
+    content: "Fast, reliable, and honest. Internet Consultation provides a service that should have existed years ago. No more calling five different companies to find the best deal.",
+    rating: 5,
+    avatar: "/avatars/david.png",
+  },
+  {
+    name: "Jessica Lee",
+    role: "Graphic Designer",
+    content: "The interface is beautiful and the results are instant. I found a Spectrum plan that was perfect for my 4K streaming and gaming needs. The process was seamless.",
+    rating: 5,
+    avatar: "/avatars/jessica.png",
+  },
+  {
+    name: "Robert Taylor",
+    role: "Retired Educator",
+    content: "At my age, I value simplicity. They helped me find a senior-friendly plan that was both affordable and high-speed. Very satisfied with the service provided.",
+    rating: 5,
+    avatar: "/avatars/robert.png",
+  },
 ];

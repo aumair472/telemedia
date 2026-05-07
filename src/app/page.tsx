@@ -9,6 +9,7 @@ import ProviderLogos from "@/components/sections/ProviderLogos";
 import ServicesSection from "@/components/sections/ServicesSection";
 import SmartCTA from "@/components/sections/SmartCTA";
 import TrustSection from "@/components/sections/TrustSection";
+import Testimonials from "@/components/sections/Testimonials";
 import WhyChooseUs from "@/components/sections/WhyChooseUs";
 
 export default function HomePage() {
@@ -21,6 +22,7 @@ export default function HomePage() {
         <HowItWorks />
         <ServicesSection />
         <WhyChooseUs />
+        <Testimonials />
         <TrustSection />
         <SmartCTA />
         <CallCTASection />

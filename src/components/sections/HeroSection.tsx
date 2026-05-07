@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 import { HERO_STATS } from "@/lib/constants";
 import { zipCodeSchema, ZipCodeFormValues } from "@/lib/validations";
 import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
+import Image from "next/image";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -38,7 +39,30 @@ export default function HeroSection() {
       className="relative flex min-h-screen items-center overflow-hidden bg-[var(--bg-base)] pt-24"
       id="top"
     >
-      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8">
+      {/* Premium Background Elements */}
+      <div className="absolute right-0 top-1/2 -translate-y-1/2 w-full lg:w-1/2 h-[80%] pointer-events-none opacity-40 mix-blend-screen overflow-hidden">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, x: 100 }}
+          animate={{ opacity: 1, scale: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut" }}
+          className="relative w-full h-full"
+        >
+          <Image
+            src="/illustrations/hero_realistic.png"
+            alt="Photorealistic Smart City Connectivity"
+            fill
+            className="object-contain object-right"
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
+        </motion.div>
+      </div>
+
+      {/* Glow Effects */}
+      <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-[var(--accent)] opacity-[0.07] blur-[150px] rounded-full pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-[600px] h-[600px] bg-blue-600 opacity-[0.05] blur-[180px] rounded-full pointer-events-none" />
+
+      <div className="relative mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 z-10">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: -10 }}

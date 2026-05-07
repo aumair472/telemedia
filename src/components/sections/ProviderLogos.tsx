@@ -22,6 +22,23 @@ export default function ProviderLogos() {
             We work with the nation&apos;s leading ISPs to bring you exclusive pricing and verified local availability at your exact address.
           </p>
         </div>
+
+        <div className="mt-12 relative w-full h-48 sm:h-64 rounded-3xl overflow-hidden border border-[var(--border)] bg-[var(--bg-card)]">
+          <Image
+            src="/illustrations/providers_realistic.png"
+            alt="Cinematic Connected Neighborhood"
+            fill
+            className="object-cover opacity-80"
+            sizes="100vw"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[#0d1117]/80" />
+          <div className="absolute inset-0 flex items-center justify-center">
+            <div className="text-center">
+              <p className="text-[var(--accent)] font-bold text-lg tracking-widest uppercase">Verified Coverage</p>
+              <p className="text-white text-sm opacity-60">Nationwide Network Infrastructure</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="relative flex overflow-hidden">
