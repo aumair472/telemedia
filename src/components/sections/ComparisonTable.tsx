@@ -58,7 +58,7 @@ export default function ComparisonTable() {
                   <td className="px-5 py-4 text-sm text-[var(--text-muted)]">{provider.bestFor}</td>
                   <td className="px-5 py-4">
                     <a
-                      href="tel:18883595742"
+                      href="tel:14692776161"
                       aria-label={`Check ${provider.name}`}
                       className="inline-block rounded-lg border border-[var(--accent-border)] bg-[var(--accent-dim)] px-3 py-2 text-xs font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[var(--bg-base)]"
                     >
@@ -96,7 +96,7 @@ export default function ComparisonTable() {
                 <p>Best for: {provider.bestFor}</p>
               </div>
               <a
-                href="tel:18883595742"
+                href="tel:14692776161"
                 aria-label={`Check ${provider.name} mobile`}
                 className="mt-4 flex w-full items-center justify-center rounded-lg border border-[var(--accent-border)] bg-[var(--accent-dim)] px-3 py-2 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[var(--bg-base)]"
               >

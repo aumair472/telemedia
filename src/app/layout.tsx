@@ -92,7 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "logo": "https://www.internetconsultation.us/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "1-888-359-5742",
+                "telephone": "+1-469-277-6161",
                 "contactType": "customer service",
                 "areaServed": "US",
                 "availableLanguage": "en"
@@ -111,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "image": "https://www.internetconsultation.us/og-image.png",
               "@id": "https://www.internetconsultation.us",
               "url": "https://www.internetconsultation.us",
-              "telephone": "1-888-359-5742",
+              "telephone": "+1-469-277-6161",
               "priceRange": "$",
               "address": {
                 "@type": "PostalAddress",

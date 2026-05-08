@@ -136,12 +136,12 @@ export default function HeroSection() {
             ) : null}
 
             <a
-              href="tel:18883595742"
+              href="tel:14692776161"
               className="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-[#00e676]/50 hover:text-[#00e676] transition-all"
-              aria-label="Call now 1-888-359-5742"
+              aria-label="Call now +1-469-277-6161"
             >
               <Phone className="w-4 h-4" />
-              Call Now: 1-888-359-5742
+              Call Now: +1-469-277-6161
             </a>
           </motion.form>
 

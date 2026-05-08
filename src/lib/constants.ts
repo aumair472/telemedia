@@ -103,7 +103,7 @@ export const SITE_CONFIG = {
     country: "USA"
   },
   contact: {
-    phone: "1-888-359-5742",
+    phone: "+1-469-277-6161",
     email: "support@symzitech.com",
     availability: "Mon–Sat 8AM–10PM EST"
   },
