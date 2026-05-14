@@ -103,7 +103,8 @@ export const SITE_CONFIG = {
     country: "USA"
   },
   contact: {
-    phone: "+1-469-277-6161",
+    // phone is encoded as base64 to prevent scraping
+    encodedPhone: "KzEtNDY5LTI3Ny02MTYx",
     email: "support@symzitech.com",
     availability: "Mon–Sat 8AM–10PM EST"
   },

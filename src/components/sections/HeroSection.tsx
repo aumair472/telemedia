@@ -10,6 +10,7 @@ import { HERO_STATS } from "@/lib/constants";
 import { zipCodeSchema, ZipCodeFormValues } from "@/lib/validations";
 import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
 import Image from "next/image";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 20 },
@@ -135,14 +136,10 @@ export default function HeroSection() {
               <p className="mt-2 text-sm text-red-400">{form.formState.errors.zip.message}</p>
             ) : null}
 
-            <a
-              href="tel:14692776161"
+            <ProtectedPhone
+              textPrefix="Call Now: "
               className="mt-4 inline-flex items-center gap-2 rounded-xl border border-white/20 px-6 py-3 text-sm font-semibold text-white hover:border-[#00e676]/50 hover:text-[#00e676] transition-all"
-              aria-label="Call now +1-469-277-6161"
-            >
-              <Phone className="w-4 h-4" />
-              Call Now: +1-469-277-6161
-            </a>
+            />
           </motion.form>
 
           <motion.div

@@ -15,6 +15,7 @@ import {
   CheckCircle 
 } from "lucide-react";
 import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 const SERVICE_CARDS = [
   {
@@ -142,9 +143,9 @@ export default function AvailabilityModal() {
                   {SERVICE_CARDS.map((card, index) => {
                     const Icon = card.icon;
                     return (
-                      <a
+                      <ProtectedPhone
                         key={index}
-                        href="tel:14692776161"
+                        showIcon={false}
                         className="group flex items-start gap-3 rounded-xl border border-[#1e2d3d] bg-[#111827] p-4 transition-all duration-200 hover:border-[#00e676]/40 hover:bg-[#00e676]/[0.03]"
                       >
                         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-[#00e676]/10 text-[#00e676]">
@@ -168,7 +169,7 @@ export default function AvailabilityModal() {
                             </span>
                           </div>
                         </div>
-                      </a>
+                      </ProtectedPhone>
                     );
                   })}
                 </div>
@@ -192,14 +193,18 @@ export default function AvailabilityModal() {
 
             {/* Bottom CTA Section */}
             <div className="sticky bottom-0 bg-gradient-to-t from-[#0d1117] via-[#0d1117]/95 to-transparent px-6 pt-6 pb-5">
-              <a
-                href="tel:14692776161"
+              <ProtectedPhone
+                showIcon={false}
                 className="relative flex w-full animate-[ctaGlow_3s_infinite] items-center justify-center gap-2 rounded-xl bg-[#00e676] py-4 text-base font-bold text-black transition-all duration-200 hover:scale-[1.01] hover:bg-[#00ff99] hover:shadow-[0_0_30px_rgba(0,230,118,0.3)]"
               >
-                <Phone size={18} fill="currentColor" />
-                <span>Free Call Booking</span>
-                <span className="text-sm font-normal text-black/70">+1-469-277-6161</span>
-              </a>
+                {(phoneStr) => (
+                  <>
+                    <Phone size={18} fill="currentColor" />
+                    <span>Free Call Booking</span>
+                    <span className="text-sm font-normal text-black/70">{phoneStr}</span>
+                  </>
+                )}
+              </ProtectedPhone>
               <p className="mt-3 text-center text-[10px] text-[#4a6080]">
                 Free service · No obligation · Experts available Mon–Fri 8AM–10PM EST
               </p>

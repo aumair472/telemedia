@@ -17,6 +17,15 @@ const nextConfig: NextConfig = {
   compress: true,
   poweredByHeader: false,
   reactStrictMode: true,
+  async redirects() {
+    return [
+      {
+        source: "/",
+        destination: "/ppc",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

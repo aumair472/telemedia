@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Mail, Phone, Clock, ShieldCheck, Building2, Lock } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function TrustSection() {
   return (
@@ -65,18 +66,22 @@ export default function TrustSection() {
             <h3 className="text-2xl font-bold text-white mb-8">Contact Our Support Team</h3>
             
             <div className="space-y-6 relative z-10">
-              <a 
-                href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
+              <ProtectedPhone 
                 className="flex items-center gap-4 group"
+                showIcon={false}
               >
-                <div className="bg-[var(--accent-dim)] p-3 rounded-xl border border-[var(--accent-border)] group-hover:bg-[var(--accent)] transition-colors duration-300">
-                  <Phone className="w-6 h-6 text-[var(--accent)] group-hover:text-black" />
-                </div>
-                <div>
-                  <p className="text-sm text-[var(--text-muted)]">Call Specialist</p>
-                  <p className="text-xl font-bold text-white">{SITE_CONFIG.contact.phone}</p>
-                </div>
-              </a>
+                {(phoneStr) => (
+                  <>
+                    <div className="bg-[var(--accent-dim)] p-3 rounded-xl border border-[var(--accent-border)] group-hover:bg-[var(--accent)] transition-colors duration-300">
+                      <Phone className="w-6 h-6 text-[var(--accent)] group-hover:text-black" />
+                    </div>
+                    <div>
+                      <p className="text-sm text-[var(--text-muted)]">Call Specialist</p>
+                      <p className="text-xl font-bold text-white">{phoneStr}</p>
+                    </div>
+                  </>
+                )}
+              </ProtectedPhone>
 
               <a 
                 href={`mailto:${SITE_CONFIG.contact.email}`}

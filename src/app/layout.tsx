@@ -92,7 +92,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "logo": "https://www.internetconsultation.us/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+1-469-277-6161",
                 "contactType": "customer service",
                 "areaServed": "US",
                 "availableLanguage": "en"
@@ -111,7 +110,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "image": "https://www.internetconsultation.us/og-image.png",
               "@id": "https://www.internetconsultation.us",
               "url": "https://www.internetconsultation.us",
-              "telephone": "+1-469-277-6161",
               "priceRange": "$",
               "address": {
                 "@type": "PostalAddress",
@@ -137,6 +135,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             })
           }}
         />
+        {/* Placeholder for ClickCease or Lunio click fraud protection script */}
+        {/* <Script id="clickcease-script" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: `// paste script here` }} /> */}
+        
+        {/* Placeholder for Call Tracking (CallRail / WhatConverts / Invoca) script */}
+        {/* <Script id="call-tracking-script" strategy="afterInteractive" dangerouslySetInnerHTML={{ __html: `// paste script here` }} /> */}
       </head>
       <body className={`${geist.className} antialiased`} suppressHydrationWarning>
         <noscript>

@@ -9,6 +9,7 @@ import { zipCodeSchema, ZipCodeFormValues } from "@/lib/validations";
 import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
 
 import { SITE_CONFIG } from "@/lib/constants";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function SmartCTA() {
   const { openModal } = useAvailabilityModal();
@@ -40,16 +41,10 @@ export default function SmartCTA() {
             Our certified specialists compare providers so you do not have to. 100% free.
           </p>
 
-          <motion.a
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-            href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
-            aria-label="Talk to an internet expert"
-            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-10 py-4 text-lg font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[0_0_32px_rgba(0,230,118,0.3)]"
-          >
-            <Phone className="w-5 h-5" />
-            Call Now: {SITE_CONFIG.contact.phone}
-          </motion.a>
+          <ProtectedPhone
+            textPrefix="Call Now: "
+            className="mt-8 inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-10 py-4 text-lg font-bold text-[var(--bg-base)] transition-all hover:scale-105 active:scale-95 hover:bg-[#00ff99] hover:shadow-[0_0_32px_rgba(0,230,118,0.3)]"
+          />
 
           <form
             onSubmit={form.handleSubmit(onSubmit)}

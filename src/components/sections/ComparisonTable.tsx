@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 
 import { PROVIDERS, SITE_CONFIG } from "@/lib/constants";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function ComparisonTable() {
   return (
@@ -57,13 +58,12 @@ export default function ComparisonTable() {
                   <td className="px-5 py-4 text-sm text-[var(--text-muted)]">{provider.contract}</td>
                   <td className="px-5 py-4 text-sm text-[var(--text-muted)]">{provider.bestFor}</td>
                   <td className="px-5 py-4">
-                    <a
-                      href="tel:14692776161"
-                      aria-label={`Check ${provider.name}`}
+                    <ProtectedPhone
+                      showIcon={false}
                       className="inline-block rounded-lg border border-[var(--accent-border)] bg-[var(--accent-dim)] px-3 py-2 text-xs font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[var(--bg-base)]"
                     >
                       Check {provider.name.split(" ")[0]}
-                    </a>
+                    </ProtectedPhone>
                   </td>
                 </tr>
               ))}
@@ -95,13 +95,12 @@ export default function ComparisonTable() {
                 <p>Contract: {provider.contract}</p>
                 <p>Best for: {provider.bestFor}</p>
               </div>
-              <a
-                href="tel:14692776161"
-                aria-label={`Check ${provider.name} mobile`}
+              <ProtectedPhone
+                showIcon={false}
                 className="mt-4 flex w-full items-center justify-center rounded-lg border border-[var(--accent-border)] bg-[var(--accent-dim)] px-3 py-2 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)] hover:text-[var(--bg-base)]"
               >
                 Check {provider.name.split(" ")[0]}
-              </a>
+              </ProtectedPhone>
             </article>
           ))}
         </div>

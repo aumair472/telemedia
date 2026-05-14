@@ -3,6 +3,7 @@
 import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
 import { SITE_CONFIG } from "@/lib/constants";
 import { Phone } from "lucide-react";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function StickyMobileCTA() {
   const { openModal } = useAvailabilityModal();
@@ -16,14 +17,13 @@ export default function StickyMobileCTA() {
       >
         Check Availability
       </button>
-      <a
-        href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
-        aria-label={`Call now: ${SITE_CONFIG.contact.phone}`}
+      <ProtectedPhone
         className="flex-1 flex items-center justify-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--bg-card)] px-4 py-3 text-center text-sm font-semibold text-white"
+        showIcon={false}
       >
         <Phone className="w-4 h-4" />
         Call Now
-      </a>
+      </ProtectedPhone>
     </div>
   );
 }

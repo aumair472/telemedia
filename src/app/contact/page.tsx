@@ -2,6 +2,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/lib/constants";
 import { Mail, Phone, MapPin, Clock, ShieldCheck } from "lucide-react";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function ContactUs() {
   return (
@@ -28,9 +29,10 @@ export default function ContactUs() {
               </div>
               <h3 className="text-xl font-bold text-white mb-2">Call Us</h3>
               <p className="text-[var(--text-muted)] mb-4">Speak directly with an internet specialist.</p>
-              <a href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`} className="text-2xl font-black text-white hover:text-[var(--accent)] transition-colors">
-                {SITE_CONFIG.contact.phone}
-              </a>
+              <ProtectedPhone 
+                className="text-2xl font-black text-white hover:text-[var(--accent)] transition-colors"
+                showIcon={false}
+              />
             </div>
 
             <div className="bg-[var(--bg-surface)] p-8 rounded-3xl border border-[var(--border)] flex flex-col items-center text-center">

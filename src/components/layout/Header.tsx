@@ -6,6 +6,7 @@ import Link from "next/link";
 import { useState } from "react";
 
 import { SITE_CONFIG } from "@/lib/constants";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -27,14 +28,9 @@ export default function Header() {
 
 
         <div className="hidden items-center gap-4 md:flex">
-          <a
-            href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
-            aria-label={`Call now ${SITE_CONFIG.contact.phone}`}
+          <ProtectedPhone 
             className="inline-flex items-center gap-2 rounded-lg bg-[var(--accent)] px-4 py-2 text-sm font-bold text-[var(--bg-base)] transition hover:bg-[#00ff99] hover:shadow-[var(--accent-glow)]"
-          >
-            <Phone className="w-4 h-4" />
-            {SITE_CONFIG.contact.phone}
-          </a>
+          />
         </div>
 
         <button
@@ -54,14 +50,10 @@ export default function Header() {
       >
         <div className="flex flex-col gap-4 px-4 py-6">
           <div className="pt-4 border-t border-[var(--border)]">
-            <a
-              href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
-              aria-label="Call now from mobile menu"
+            <ProtectedPhone 
+              textPrefix="Call Now: "
               className="flex items-center justify-center gap-2 rounded-lg bg-[var(--accent)] px-3 py-3 text-center text-sm font-bold text-[var(--bg-base)]"
-            >
-              <Phone className="w-4 h-4" />
-              Call Now: {SITE_CONFIG.contact.phone}
-            </a>
+            />
           </div>
         </div>
       </div>

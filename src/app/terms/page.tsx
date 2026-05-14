@@ -1,6 +1,7 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SITE_CONFIG } from "@/lib/constants";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function TermsConditions() {
   return (
@@ -62,7 +63,7 @@ export default function TermsConditions() {
                 {SITE_CONFIG.address.city}, {SITE_CONFIG.address.state} {SITE_CONFIG.address.zip}
               </p>
               <p>Email: {SITE_CONFIG.contact.email}</p>
-              <p>Phone: {SITE_CONFIG.contact.phone}</p>
+              <ProtectedPhone textPrefix="Phone: " showIcon={false} />
             </div>
           </div>
         </div>

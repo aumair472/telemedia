@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Phone, Shield, Star, CheckCircle, Zap } from "lucide-react";
 import { SITE_CONFIG } from "@/lib/constants";
 import Image from "next/image";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 const TRUST_BAR = [
   { icon: Shield, label: "No Hidden Fees" },
@@ -44,26 +45,20 @@ export default function CallCTASection() {
 
           {/* Big Phone Number Display */}
           <div className="mt-8">
-            <a
-              href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
+            <ProtectedPhone 
               className="inline-flex items-center gap-3 text-4xl font-black text-[#00e676] transition-colors hover:text-[#00ff99] sm:text-5xl"
-            >
-              <Phone className="h-10 w-10 shrink-0" fill="currentColor" />
-              {SITE_CONFIG.contact.phone}
-            </a>
+              iconClassName="h-10 w-10 shrink-0 fill-current"
+            />
             <p className="mt-2 text-sm text-[#4a6080]">
               {SITE_CONFIG.contact.availability} · Free Service
             </p>
           </div>
 
           {/* Primary CTA Button */}
-          <a
-            href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`}
+          <ProtectedPhone
+            textPrefix="Call Now: "
             className="mx-auto mt-8 flex w-full max-w-sm items-center justify-center gap-2 rounded-xl bg-[#00e676] py-4 text-lg font-bold text-black shadow-[0_0_30px_rgba(0,230,118,0.15)] transition-all duration-200 hover:bg-[#00ff99] hover:shadow-[0_0_40px_rgba(0,230,118,0.3)]"
-          >
-            <Phone size={20} fill="currentColor" />
-            Free Call Booking
-          </a>
+          />
 
           {/* Trust Row */}
           <div className="mt-8 flex flex-wrap justify-center gap-6">

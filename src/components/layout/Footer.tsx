@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { SITE_CONFIG } from "@/lib/constants";
+import ProtectedPhone from "@/components/ui/ProtectedPhone";
 
 export default function Footer() {
   return (
@@ -35,9 +36,10 @@ export default function Footer() {
             <nav className="flex flex-col gap-4 text-sm text-[var(--text-muted)]">
               <Link href="/privacy" className="hover:text-[var(--accent)] transition-colors">Privacy Policy</Link>
               <Link href="/terms" className="hover:text-[var(--accent)] transition-colors">Terms & Conditions</Link>
-              <a href={`tel:${SITE_CONFIG.contact.phone.replace(/[^0-9]/g, '')}`} className="text-[var(--accent)] font-bold mt-2">
-                {SITE_CONFIG.contact.phone}
-              </a>
+              <ProtectedPhone 
+                showIcon={false}
+                className="text-[var(--accent)] font-bold mt-2"
+              />
             </nav>
           </div>
         </div>
