@@ -92,6 +92,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "logo": "https://www.internetconsultation.us/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
+                "telephone": "+1-469-808-0310",
                 "contactType": "customer service",
                 "areaServed": "US",
                 "availableLanguage": "en"
@@ -111,6 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               "@id": "https://www.internetconsultation.us",
               "url": "https://www.internetconsultation.us",
               "priceRange": "$",
+              "telephone": "+1-469-808-0310",
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "2600 E Renner Rd, Apt 276",

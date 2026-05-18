@@ -32,7 +32,9 @@ export default function ProtectedPhone({
         try {
           const decoded = atob(SITE_CONFIG.contact.encodedPhone);
           setPhone(decoded);
-          setHref(`tel:${decoded.replace(/[^0-9]/g, "")}`);
+          const digits = decoded.replace(/[^0-9]/g, "");
+          const finalHref = digits.startsWith("1") ? `tel:+${digits}` : `tel:+1${digits}`;
+          setHref(finalHref);
           setRevealed(true);
         } catch (e) {
           console.error("Failed to decode phone number");
