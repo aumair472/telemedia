@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Phone } from "lucide-react";
-import { SITE_CONFIG } from "@/lib/constants";
+import { decodeContactPhone, getPhoneTelHref } from "@/lib/phone";
 
 interface ProtectedPhoneProps {
   className?: string;
@@ -29,14 +29,12 @@ export default function ProtectedPhone({
     const handleInteraction = () => {
       if (!revealed) {
         // Decode obfuscated phone number
-        try {
-          const decoded = atob(SITE_CONFIG.contact.encodedPhone);
+        const decoded = decodeContactPhone();
+        if (decoded) {
           setPhone(decoded);
-          const digits = decoded.replace(/[^0-9]/g, "");
-          const finalHref = digits.startsWith("1") ? `tel:+${digits}` : `tel:+1${digits}`;
-          setHref(finalHref);
+          setHref(getPhoneTelHref());
           setRevealed(true);
-        } catch (e) {
+        } else {
           console.error("Failed to decode phone number");
         }
       }

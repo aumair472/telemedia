@@ -7,6 +7,7 @@ import "./globals.css";
 import { AvailabilityModalProvider } from "@/context/AvailabilityModalContext";
 import AvailabilityModal from "@/components/modals/AvailabilityModal";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
+import GlobalClickToCall from "@/components/GlobalClickToCall";
 
 export const geist = Geist({
   subsets: ["latin"],
@@ -156,6 +157,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           {children}
           <AvailabilityModal />
           <StickyMobileCTA />
+          <GlobalClickToCall />
         </AvailabilityModalProvider>
         <Toaster richColors closeButton position="top-right" />
       </body>
