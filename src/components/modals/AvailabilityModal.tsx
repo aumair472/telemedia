@@ -2,17 +2,17 @@
 
 import { useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { 
-  X, 
-  Wifi, 
-  Zap, 
-  Globe, 
-  Home, 
-  Shield, 
-  Phone, 
-  Star, 
-  Clock, 
-  CheckCircle 
+import {
+  X,
+  Wifi,
+  Zap,
+  Globe,
+  Home,
+  Shield,
+  Phone,
+  Star,
+  Clock,
+  CheckCircle
 } from "lucide-react";
 import { useAvailabilityModal } from "@/context/AvailabilityModalContext";
 import ProtectedPhone from "@/components/ui/ProtectedPhone";
@@ -180,7 +180,7 @@ export default function AvailabilityModal() {
 
               {/* Trust Bar */}
               <div className="my-5 h-px bg-gradient-to-r from-transparent via-[#1e2d3d] to-transparent" />
-              
+
               <div className="flex flex-wrap justify-center gap-6">
                 {TRUST_ITEMS.map((item, index) => {
                   const Icon = item.icon;
@@ -203,7 +203,7 @@ export default function AvailabilityModal() {
                 {(phoneStr) => (
                   <>
                     <Phone size={18} fill="currentColor" />
-                    <span>Free Call Booking</span>
+                    <span>Get Free consultation</span>
                     <span className="text-sm font-normal text-black/70">{phoneStr}</span>
                   </>
                 )}
