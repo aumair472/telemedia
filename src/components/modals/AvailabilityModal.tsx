@@ -203,7 +203,7 @@ export default function AvailabilityModal() {
                 {(phoneStr) => (
                   <>
                     <Phone size={18} fill="currentColor" />
-                    <span>Get Free consultation</span>
+                    <span>Get A Free Consultation</span>
                     <span className="text-sm font-normal text-black/70">{phoneStr}</span>
                   </>
                 )}
