@@ -104,7 +104,7 @@ export const SITE_CONFIG = {
   },
   contact: {
     // phone is encoded as base64 to prevent scraping
-    encodedPhone: "KDQ2OSkgODA4LTAzMTA=",
+    encodedPhone: "KDIxMykgOTY0LTc3NTk=",
     email: "support@symzitech.com",
     availability: "Mon–Sat 8AM–10PM EST"
   },
