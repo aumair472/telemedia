@@ -78,10 +78,10 @@ export default function AvailabilityModal() {
                   Internet Services Available in Your Area
                 </div>
                 <h2 className="mt-6 text-center text-3xl font-black leading-tight text-white sm:text-4xl tracking-tight max-w-lg">
-                  Compare and connect with <span className="text-[#00e676] drop-shadow-[0_0_15px_rgba(0,230,118,0.2)]">top providers</span> in your area.
+                  Compare and connect with <span className="text-[#00e676] drop-shadow-[0_0_15px_rgba(0,230,118,0.2)]">best providers</span> in your area.
                 </h2>
-                <p className="mx-auto mt-4 max-w-md text-center text-sm sm:text-base text-[#8b9ab0] font-medium">
-                  Call now for free expert help — no hidden fees.
+                <p className="mt-4 text-center text-xs sm:text-sm font-medium text-[#8b9ab0] opacity-90">
+                  Blazing Fast · Economical · <span className="text-[#00e676]">Zero-Lag</span>
                 </p>
               </div>
 
